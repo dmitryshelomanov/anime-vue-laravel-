@@ -1,0 +1,354 @@
+body, html {
+  background-color: #edf0f5;
+}
+header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    padding: 30px 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.26);
+    z-index: 998;
+}
+@media screen and (max-width: 800px) {
+  header {
+    height: auto;
+      padding: 5px;
+  }
+  header .p-none {margin-bottom: 15px}
+}
+.side-bar {
+    display: none;
+    position: fixed;
+    width: 25%;
+    top: 100px;
+    left: 0;
+    min-height: 100vh;
+    background-color: #323443;
+    float: left;
+    z-index: 999;
+}
+
+.content {
+    display: block;
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    top: 150px;
+    background-color: transparent;
+}
+@media screen and (max-width: 950px) {
+  .content {width: 100%}
+    .side-bar {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 600px) {
+  .side-bar {
+    width: 90%;
+    overflow: auto;
+    height: 100%;
+  }
+}
+i {cursor: pointer;}
+.list {
+  color: #e8e8ea;
+    z-index: 9999;
+}
+.side-bar ul {margin: 0; padding: 0;}
+.side-bar li {
+  list-style: none;
+  padding: 20px 10px;
+  color: #98999e;
+}
+.side-bar li a {
+    padding: 20px 10px;
+    color: #98999e;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .5s;
+    text-decoration: none;
+}
+.side-bar li:hover {
+  color: #fff;
+  background-color: #1e202c
+}
+.side-bar li i {
+  padding-right: 10px;
+}
+/*buttons*/
+
+.material-btn {
+  width: auto;
+  padding: 6px 5px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: .3s;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.26);
+}
+.b-width { min-width: 120px;}
+.b-width i { padding-right: 15px}
+.material-btn:hover {
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.26);
+}
+.material-btn:active {box-shadow: none;}
+.b-default {
+  background-color: #fff;
+  color: #6C7A89;
+}
+.b-success {
+  background-color: #26C281;
+  color: #fff;
+}
+.b-danger {
+  background-color: #F64747;
+  color: #fff;
+}
+.b-warning {
+  background-color: #e9d460;
+  color: #fff;
+}
+.b-primary {
+  background-color: #337ab7;
+  color: #fff;
+}
+
+.info {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  margin-bottom: 15px; 
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.26);
+  padding: 10px;
+  color: #98999e;
+  font-weight: bold;
+  line-height: 75px;
+}
+.data {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  margin-bottom: 15px; 
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.26);
+  padding: 10px;
+  color: #98999e;
+  font-weight: bold;
+}
+
+.info img {
+  width: 75px;
+  height: 75px;
+  margin-left: 20px;
+}
+
+.width {width:100%;}
+
+.login {
+  background: -webkit-linear-gradient(top, #35537a 0%,#1d2d44 100%) !important;
+  background: -moz-linear-gradient(top, #35537a 0%,#1d2d44 100%) !important;
+  background: -o-linear-gradient(top, #35537a 0%,#1d2d44 100%) !important;
+  background: linear-gradient(top, #35537a 0%,#1d2d44 100%) !important;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+}
+.logined {
+    position: absolute;
+    display: block;
+    width: 30%;
+    margin: 20% 35%;
+}
+.logined input[type=text] {
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: #6C7A89;
+  margin-bottom: 2px;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.26);
+}
+.logined input[type=text]:nth-of-type(2) {
+  margin-bottom: 15px
+}
+.logined img {margin-bottom: 15px}
+
+/*simple-player*/
+
+.simple-player-container {
+    display: inline-block;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-right: 15px
+}
+.simple-player-container > div > ul {
+    margin: 0;
+    padding-left: 0;
+}
+.simpleplayer-play-control {
+    background-image: url('../img/audio/play.png');
+    display: block;
+    width: 16px;
+    height: 16px;
+    bottom: -5px;
+    position: relative;
+}
+.simpleplayer-play-control:hover {
+    background-image: url('../img/audio/playing.png');
+}
+.simpleplayer-stop-control {
+    background-image: url('../img/audio/stop.png');
+    display: block;
+    width: 16px;
+    height: 16px;
+    bottom: -5px;
+    position: relative;
+}
+.simpleplayer-stop-control:hover {
+    background-image: url('../img/audio/stoped.png');
+}
+
+.audio div{
+  margin-bottom: 5px
+}
+.user, .search {
+  width: 100%;
+  min-height: 100px;
+  background-color: #fff;
+  margin-bottom: 15px; 
+  padding: 10px;
+  color: #98999e;
+  font-weight: bold;
+  transition: .5s
+}
+.search img {
+  max-width: 100%;
+  height: auto;
+}
+.search .name {
+  padding: 15px 0;
+}
+.search .action form {display: inline-block}
+.search .action form:first-child {margin-right: 5px}
+.user img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50px
+}
+.user div {display: inline-block;}
+.user div:not(:last-child) {margin-right: 15px;}
+.p-none {padding: 0}
+@media screen and (max-width: 400px) {
+  .data {
+    padding: 10px 0;
+  }
+  .user div  {
+    display: block;
+    margin-bottom: 15px;
+    text-align: center
+  }
+}
+.close {padding: 20px}
+.refresh img {
+  width: 300px;
+  height: 160px
+}
+.refresh div {
+  display: inline-block;
+}
+.refresh button {margin-top: 15px}
+.error {
+  background: #f2dede;
+  color: #a94442 !important;
+}
+textarea {
+    min-height: 300px;
+}
+.wrapper {
+    display: block;
+    position: relative;
+}
+.changeAnime {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+.changeAnime-inner {
+    display: block;
+    width: 80%;
+    height: 80%;
+    background-color: #fff;
+    margin: 5% auto;
+    overflow: auto;
+    padding: 15px;
+}
+.changeAnime-inner ul {
+    margin: 0;
+    padding: 0;
+}
+.changeAnime-inner ul li {
+    list-style: none;
+    font-weight: bold;
+    padding: 15px;
+    background-color: #fff;
+    transition: .5s;
+    cursor: pointer;
+}
+.changeAnime-inner h2 {font-weight: bold}
+.changeAnime-inner div {
+    font-weight: bold;
+    margin: 15px 0;
+}
+.changeAnime-inner ul li:hover {background-color: #eee;}
+.page {
+    margin: 15px 0;
+}
+.user-block {
+    margin: 15px 0;
+    padding: 5px;
+}
+.user-block img {
+    width: 75px;
+    height: 75px;
+    border-radius: 75px;
+    margin-right: 15px;
+}
+.user-block form {
+    display: inline-block;
+}
+.role {
+    margin: 15px 0;
+    padding: 0;
+}
+.user-block .close {
+    color: red;
+    opacity: .5;
+}
+.user-block .close:hover {
+    opacity:1;
+}
+@media screen and (max-width: 500px) {
+    .user-block button {
+        margin: 15px 0;
+    }
+}
+button {
+    outline: none;
+}
+.user-block .help {
+    color: #2ca02c;
+}
+.role-info {
+    padding: 5px;
+    color: #000
+}
